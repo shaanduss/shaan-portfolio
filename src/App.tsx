@@ -7,8 +7,7 @@ function App() {
     <div>
       <WelcomeDialog />
       <Navbar/>
-      <div className="mt-10 h-[150vh]">
-        Bodyy
+      <div>
       </div>
     </div>
   )

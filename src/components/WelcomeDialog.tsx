@@ -1,6 +1,5 @@
 
 import { useEffect, useState } from "react";
-import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 
 export default function WelcomeDialog() {
@@ -28,10 +27,7 @@ export default function WelcomeDialog() {
   };
 
   return (
-  <Dialog open={open} onOpenChange={setOpen}>
-    <DialogOverlay className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
-    <div className="fixed inset-0 flex items-center justify-center p-4">
-      <DialogContent forceMount>
+    <div className="fixed inset-0 flex items-center justify-center">
         <AnimatePresence>
           {open && (
             <motion.div
@@ -43,17 +39,15 @@ export default function WelcomeDialog() {
               exit="exit"
               onClick={(e) => e.stopPropagation()}
             >
-              <DialogTitle className="text-2xl font-bold mb-4 text-gray-900">
+              <p className="text-2xl font-bold mb-4 text-gray-900">
                 Welcome to My Portfolio!
-              </DialogTitle>
-              <DialogDescription className="text-gray-700 mb-6">
+              </p>
+              <p className="text-gray-700 mb-6">
                 I'm glad you're here. Explore my projects and let's create something amazing together.
-              </DialogDescription>
+              </p>
             </motion.div>
           )}
         </AnimatePresence>
-      </DialogContent>
     </div>
-  </Dialog>
   );
 }
