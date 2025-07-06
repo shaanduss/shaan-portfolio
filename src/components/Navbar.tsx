@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export const Navbar: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState("Home");
-  const tabs = ["Home", "Projects", "About", "Contact"];
+  const tabs = ["Home", "Projects", "Resume", "Contact"];
 
   return (
     <div className="sticky top-0 w-full">
