@@ -3,18 +3,21 @@ import './App.css'
 import { Navbar } from './components/Navbar'
 import WelcomeDialog from './components/WelcomeDialog'
 import { HomeView } from './views/HomeView'
+import { ThemeProvider } from './components/theme-provider'
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen flex-col">
+    <ThemeProvider>
+      <Router>
         <WelcomeDialog />
-        <Navbar/>
-        <Routes>
-          <Route path="/" element={<HomeView />} />
-        </Routes>
-      </div>
-    </Router>
+        <div className="min-h-screen flex-col">
+          <Navbar/>
+          <Routes>
+            <Route path="/" element={<HomeView />} />
+          </Routes>
+        </div>
+      </Router>
+    </ThemeProvider>
   )
 }
 
