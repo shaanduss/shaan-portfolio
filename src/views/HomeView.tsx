@@ -3,12 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import React from "react";
-import { Link } from "react-router-dom";
 
 export const HomeView: React.FC = () => {
   const cardDescription = "I am a Computer Science student at HKUST with hands-on experience in fintech and hedge fund environments, developing scalable APIs and automating complex investment data workflows.\n Proficient in Python, Java, and cloud technologies, I leverage strong technical skills to drive efficiency and innovation in finance. Passionate about applying technology to solve real-world financial challenges.";
   const cardDescriptionArr = cardDescription.split('\n');
-  const skills = ["SpringBoot", "Docker", "NextJS", "React", "Github"]
+  const skills = ["SpringBoot", "Docker", "NextJS", "React", "Github", "FastAPI", "MySQL", "MongoDB"]
 
   return(
     <div className="flex flex-col justify-center items-center px-20 mt-7 gap-10">
@@ -41,30 +40,32 @@ export const HomeView: React.FC = () => {
         </CardContent>
       </Card>
       {/* Skills Carousel */}
-      <Carousel className="w-full">
-        <CarouselContent>
-          {skills.map((skill, index) => {
-            const imgName = "/public/" + skill.toLowerCase() + ".png";
-            return(
-              <CarouselItem key={index} className="basis-1/3">
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="flex flex-col items-center justify-center p-6">
-
-                      <img src={imgName} className="text-white h-32" />
-                      <div className="text-muted-foreground">
-                        {skill}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            )
-          })}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
+      <div className="w-full">
+        <p className="text-left text-3xl font-bold">Skills</p>
+        <Carousel className="w-full mt-6">
+          <CarouselContent>
+            {skills.map((skill, index) => {
+              const imgName = "/public/" + skill.toLowerCase() + ".png";
+              return(
+                <CarouselItem key={index} className="basis-1/4">
+                  <div>
+                    <Card>
+                      <CardContent className="flex flex-col items-center justify-between pt-6">
+                        <img src={imgName} className="text-white h-20" />
+                        <div className="text-card-foreground mt-7">
+                          {skill}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              )
+            })}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </div>
     </div>
   )
 }
