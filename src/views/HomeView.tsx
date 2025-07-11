@@ -33,7 +33,7 @@ export const HomeView: React.FC = () => {
               <a href="/contact" className="pl-2"><Button variant="secondary" className="w-32 cursor-pointer">Contact Me</Button></a>
             </div>
             <Avatar className="size-64">
-              <AvatarImage src="/public/shaan.jpg" />
+              <AvatarImage src="/shaan.jpg" />
               <AvatarFallback>SD</AvatarFallback>
             </Avatar>
           </div>
@@ -45,7 +45,7 @@ export const HomeView: React.FC = () => {
         <Carousel className="w-full mt-6">
           <CarouselContent>
             {skills.map((skill, index) => {
-              const imgName = "/public/" + skill.toLowerCase() + ".png";
+              const imgName = "/" + skill.toLowerCase() + ".png";
               return(
                 <CarouselItem key={index} className="basis-1/4">
                   <div>
