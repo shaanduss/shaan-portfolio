@@ -45,7 +45,7 @@ const IntroCard: React.FC = () => {
             </a>
           </div>
           <Avatar className="size-64">
-            <AvatarImage src="/shaan.jpg" />
+            <AvatarImage src="/home/shaan.jpg" />
             <AvatarFallback>SD</AvatarFallback>
           </Avatar>
         </div>

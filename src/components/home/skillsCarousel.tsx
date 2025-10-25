@@ -9,14 +9,7 @@ import {
 import { Card, CardContent } from "../ui/card";
 
 const SkillsCarousel: React.FC = () => {
-  const skills = [
-    "SpringBoot",
-    "Docker",
-    "React",
-    "Github",
-    "MySQL",
-    "MongoDB",
-  ];
+  const skills = ["SpringBoot", "Docker", "React", "MySQL", "MongoDB"];
   return (
     <div className="w-full flex flex-col items-center">
       {/* Title and description outside the card */}
@@ -38,7 +31,7 @@ const SkillsCarousel: React.FC = () => {
             <Carousel className="w-full py-10">
               <CarouselContent className="px-12">
                 {skills.map((skill, index) => {
-                  const imgName = "/" + skill.toLowerCase() + ".png";
+                  const imgName = "/skills/" + skill.toLowerCase() + ".png";
                   return (
                     <CarouselItem
                       key={index}
