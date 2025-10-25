@@ -3,4 +3,5 @@ export interface ProjectInterface {
   projectName: string;
   projectDescription: string;
   projectImg: string;
+  projectDate: string;
 }
