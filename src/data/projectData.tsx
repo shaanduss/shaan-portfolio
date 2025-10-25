@@ -2,11 +2,27 @@ import type { ProjectInterface } from "@/interfaces/projectInterface";
 
 export const projectData: ProjectInterface[] = [
   {
+    projectID: "market-sentiment",
+    projectName: "Market Sentiment using LLMs",
+    projectDescription:
+      "Negative, Neutral or Positive Rating for Financial Headlines with Confidence Score.",
+    projectImg: "projects/market-sentiment-1.png",
+    projectDate: "Oct '25",
+  },
+  {
+    projectID: "market-data",
+    projectName: "Market Data Aggregator",
+    projectDescription:
+      "Stock Ticker Search using a WS connected to several Financial APIs.",
+    projectImg: "projects/market-data-1.png",
+    projectDate: "Aug '25",
+  },
+  {
     projectID: "form-generator",
     projectName: "Form Generator",
     projectDescription: "Dynamic Form Builder with Input Types & Validation",
-    projectImg: "projects/topelec-1.png", // TODO - Fix Image
-    projectDate: "Aug '25",
+    projectImg: "projects/form-generator-1.png", // TODO - Fix Image
+    projectDate: "Jul '25",
   },
   {
     projectID: "jlau",
