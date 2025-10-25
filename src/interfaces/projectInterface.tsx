@@ -1,5 +1,6 @@
 export interface ProjectInterface {
-  projectID: string
-  projectName: string
-  projectDescription: string
+  projectID: string;
+  projectName: string;
+  projectDescription: string;
+  projectImg: string;
 }
