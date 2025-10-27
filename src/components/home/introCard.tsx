@@ -38,7 +38,7 @@ const IntroCard: React.FC = () => {
             <a href="/contact" className="pl-0">
               <Button
                 variant="secondary"
-                className="w-32 border-border text-card-foreground hover:bg-accent"
+                className="w-32 border-border text-card-foreground hover:bg-accent cursor-pointer"
               >
                 Contact Me
               </Button>
