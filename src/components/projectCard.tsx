@@ -22,14 +22,14 @@ export const ProjectCard: React.FC<ProjectInterface> = (props) => {
           </div>
           <div className="flex flex-col items-end">
             <Badge variant="secondary">
-              <ClockFading /> {props.projectDate}
+              <ClockFading /> {props.projectDateStr}
             </Badge>
           </div>
         </CardHeader>
         <CardContent className="pb-0 px-0">
           <div className="aspect-video">
             <img
-              src={props.projectImg}
+              src={`/projects/${props.projectID}/1.png`}
               className="object-cover w-full h-full"
             />
           </div>
