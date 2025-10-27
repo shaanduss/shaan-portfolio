@@ -2,6 +2,6 @@ export interface ProjectInterface {
   projectID: string;
   projectName: string;
   projectDescription: string;
-  projectImg: string;
-  projectDate: string;
+  projectDate: Date;
+  projectDateStr: string;
 }
