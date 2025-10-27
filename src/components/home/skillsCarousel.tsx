@@ -9,16 +9,30 @@ import {
 import { Card, CardContent } from "../ui/card";
 
 const SkillsCarousel: React.FC = () => {
-  const skills = ["SpringBoot", "Docker", "React", "MySQL", "MongoDB"];
+  const skills = [
+    "React",
+    "Docker",
+    "SpringBoot",
+    "Python",
+    "NextJS",
+    "Typescript",
+    "Rest API",
+    "Redux",
+    "NodeJS",
+    "Tailwind",
+    "Supabase",
+    "PGSQL",
+    "MongoDB",
+  ];
   return (
     <div className="w-full flex flex-col items-center">
       {/* Title and description outside the card */}
       <div className="mb-6 w-full px-4">
         <p className="text-left text-3xl font-semibold text-card-foreground mb-2">
-          Core Skills
+          Skills & Technologies
         </p>
         <p className="text-left text-base text-muted-foreground mb-6 font-normal">
-          Technologies I use most often
+          Technologies central to my professional toolkit (drag to see all).
         </p>
       </div>
       {/* Carousel card, wider */}
@@ -28,14 +42,22 @@ const SkillsCarousel: React.FC = () => {
       >
         <div className="rounded-2xl p-6 relative flex flex-col">
           <div className="relative flex items-center w-full">
-            <Carousel className="w-full py-10">
+            <Carousel
+              opts={{
+                align: "start", // or "center"
+                dragFree: true, // allow free dragging across multiple items
+                skipSnaps: false, // allow skipping snaps for multiple items
+                containScroll: "trimSnaps", // constrain scroll within carousel
+              }}
+              className="w-full py-10"
+            >
               <CarouselContent className="px-12">
                 {skills.map((skill, index) => {
                   const imgName = "/skills/" + skill.toLowerCase() + ".png";
                   return (
                     <CarouselItem
                       key={index}
-                      className="basis-1/2 md:basis-1/3 my-2"
+                      className="basis-1/1 lg:basis-1/3 xl:basis-1/5 my-2 select-none"
                     >
                       <div className="h-full flex items-center justify-center">
                         <Card className="border border-border bg-background shadow-sm rounded-2xl">

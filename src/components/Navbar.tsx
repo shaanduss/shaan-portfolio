@@ -28,7 +28,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <div className="sticky top-0 w-full z-100 backdrop-blur-3xl">
-      <nav className="pb-2 pt-3 px-20 border-b flex justify-between">
+      <nav className="pb-2 pt-3 px-20 shadow-xl flex justify-between">
         <ul className="flex font-medium text-md gap-x-10">
           {tabs.map((item, index) => (
             <motion.li
