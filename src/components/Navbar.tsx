@@ -18,7 +18,10 @@ export const Navbar: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState("Home");
 
   useEffect(() => {
-    const index = routes.indexOf(location.pathname);
+    const index = routes.findIndex((route) => {
+      if (route != "/") return location.pathname.startsWith(route);
+      else return location.pathname === route;
+    });
     if (index !== -1) {
       setSelectedTab(tabs[index]);
     } else {
@@ -27,7 +30,7 @@ export const Navbar: React.FC = () => {
   }, [location.pathname]);
 
   return (
-    <div className="sticky top-0 w-full z-100 backdrop-blur-3xl">
+    <div className="sticky top-0 w-full z-100 bg-background/70 backdrop-blur-3xl">
       <nav className="pb-2 pt-3 px-20 shadow-xl flex justify-between">
         <ul className="flex font-medium text-md gap-x-10">
           {tabs.map((item, index) => (
@@ -61,12 +64,12 @@ export const Navbar: React.FC = () => {
             </motion.li>
           ))}
         </ul>
-        <a href="/">
+        <Link to="/">
           <Button className="cursor-pointer" variant="outline">
             <GithubSVG />
             GitHub
           </Button>
-        </a>
+        </Link>
       </nav>
     </div>
   );

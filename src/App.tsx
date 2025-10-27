@@ -1,9 +1,11 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
-import './App.css'
-import { Navbar } from './components/Navbar'
-import WelcomeDialog from './components/WelcomeDialog'
-import { HomeView } from './views/HomeView'
-import { ThemeProvider } from './components/theme-provider'
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import "./App.css";
+import { Navbar } from "./components/Navbar";
+import WelcomeDialog from "./components/WelcomeDialog";
+import { HomeView } from "./views/HomeView";
+import { ThemeProvider } from "./components/theme-provider";
+import { ProjectView } from "@/views/project/[projectID]/ProjectView";
+import { AllProjectsView } from "@/views/project/AllProjectsView";
 
 function App() {
   return (
@@ -11,14 +13,16 @@ function App() {
       <Router>
         <WelcomeDialog />
         <div className="min-h-screen flex-col">
-          <Navbar/>
+          <Navbar />
           <Routes>
             <Route path="/" element={<HomeView />} />
+            <Route path="/projects/:projectID/*" element={<ProjectView />} />
+            <Route path="/projects/" element={<AllProjectsView />} />
           </Routes>
         </div>
       </Router>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;

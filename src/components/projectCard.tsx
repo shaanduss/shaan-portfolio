@@ -8,10 +8,11 @@ import {
 } from "@/components/ui/card";
 import type { ProjectInterface } from "@/interfaces/projectInterface";
 import { ClockFading } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const ProjectCard: React.FC<ProjectInterface> = (props) => {
   return (
-    <div>
+    <Link to={`/projects/${props.projectID}`}>
       <Card className="pb-0">
         <CardHeader className="flex justify-between items-center">
           <div className="flex flex-col items-start">
@@ -35,6 +36,6 @@ export const ProjectCard: React.FC<ProjectInterface> = (props) => {
           </div>
         </CardContent>
       </Card>
-    </div>
+    </Link>
   );
 };
