@@ -30,7 +30,7 @@ export const Navbar: React.FC = () => {
   }, [location.pathname]);
 
   return (
-    <div className="sticky top-0 w-full z-100 bg-background/70 backdrop-blur-3xl">
+    <div className="sticky top-0 w-full z-100 bg-background/40 backdrop-blur-3xl">
       <nav className="pb-2 pt-3 px-20 shadow-xl flex justify-between">
         <ul className="flex font-medium text-md gap-x-10">
           {tabs.map((item, index) => (

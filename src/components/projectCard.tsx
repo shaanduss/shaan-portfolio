@@ -22,7 +22,7 @@ export const ProjectCard: React.FC<ProjectInterface> = (props) => {
             </CardDescription>
           </div>
           <div className="flex flex-col items-end">
-            <Badge variant="time">
+            <Badge variant="secondary">
               <ClockFading /> {props.projectDateStr}
             </Badge>
           </div>
