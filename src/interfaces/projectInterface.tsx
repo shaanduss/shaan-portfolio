@@ -11,4 +11,6 @@ export interface ProjectInterface {
   numImages: number;
   details?: ProjectDetail[];
   badges?: string[];
+  imageLabels?: (string | null)[];
+  githubLink?: string;
 }

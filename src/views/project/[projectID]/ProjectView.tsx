@@ -1,6 +1,8 @@
+import { GithubSVG } from "@/components/Navbar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { projectData } from "@/data/projectData";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export const ProjectView: React.FC = () => {
   const { projectID } = useParams();
@@ -13,7 +15,15 @@ export const ProjectView: React.FC = () => {
     if (i == 0) return <div></div>;
     else
       return (
-        <div key={`${project.projectID}-image-${imageNum}`}>
+        <div
+          key={`${project.projectID}-image-${imageNum}`}
+          className="flex flex-col gap-y-2"
+        >
+          {project.imageLabels?.[i] && (
+            <p className="font-normal font-mono text-sm">
+              {project.imageLabels[i]}
+            </p>
+          )}
           <img
             src={`/projects/${project.projectID}/${imageNum}.png`}
             className="w-full rounded-sm"
@@ -54,8 +64,25 @@ export const ProjectView: React.FC = () => {
               <p className="font-bold text-xl">{project.projectDateStr}</p>
             </div>
 
+            <div className="flex items-start w-32">
+              {project.githubLink && (
+                <>
+                  <Button
+                    className="cursor-pointer"
+                    variant="secondary"
+                    asChild
+                  >
+                    <Link to={project.githubLink} target="_blank">
+                      <GithubSVG />
+                      Repository
+                    </Link>
+                  </Button>
+                </>
+              )}
+            </div>
+
             {/* Badges Section */}
-            <div className="flex gap-x-3 items-center">
+            <div className="flex flex-wrap gap-x-3 items-center w-150 gap-y-3">
               {project.badges?.map((name) => (
                 <Badge variant="project" className="text-md px-3">
                   {name}
@@ -78,9 +105,13 @@ export const ProjectView: React.FC = () => {
             ))}
 
             {/* Images Section */}
-            <div className="flex flex-col gap-y-3 mt-10 mb-10">
-              <p className="font-normal font-mono text-md">OTHER IMAGES</p>
-              <div className="flex flex-col gap-y-8">{images}</div>
+            <div className="flex flex-col gap-y-1 mt-10 mb-10">
+              {project.numImages > 1 && (
+                <>
+                  <p className="font-normal font-mono text-md">OTHER IMAGES</p>
+                  <div className="flex flex-col gap-y-10">{images}</div>
+                </>
+              )}
             </div>
           </div>
         </div>
