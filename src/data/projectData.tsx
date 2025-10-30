@@ -25,7 +25,7 @@ export const projectData: ProjectInterface[] = [
   },
   {
     projectID: "rabbit-credit",
-    projectName: "Rabbit Credit —` Internship",
+    projectName: "Rabbit Credit — Internship",
     projectDescription: "Worked as an Application Developer for 7 months.",
     projectDate: new Date(2025, 9 - 1, 1),
     projectDateStr: "Sep '25",
