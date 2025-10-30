@@ -1,3 +1,4 @@
+import HobbiesCarousel from "@/components/home/hobbiesCarousel";
 import IntroCard from "@/components/home/introCard";
 import RecentExperiences from "@/components/home/recentExperiences";
 import SkillsCarousel from "@/components/home/skillsCarousel";
@@ -14,6 +15,7 @@ export const HomeView: React.FC = () => {
       </Alert>
       <IntroCard />
       <SkillsCarousel />
+      <HobbiesCarousel />
       <RecentExperiences />
     </div>
   );
