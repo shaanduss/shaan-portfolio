@@ -43,15 +43,9 @@ export const Navbar: React.FC = () => {
                     ? "var(--foreground)"
                     : "var(--muted-foreground)",
               }}
-              onClick={() => setSelectedTab(item)}
-              className="relative rounded-t-[5px] rounded-bl-none rounded-br-none px-4 py-2 cursor-pointer flex justify-between
-                items-center min-w-0 select-none bg-none"
+              className="relative rounded-t-[5px] rounded-bl-none rounded-br-none px-4 py-2 cursor-pointer flex justify-between items-center min-w-0 select-none bg-none"
             >
-              <Link
-                to={routes[index]}
-                onClick={() => setSelectedTab(item)}
-                className="w-full cursor-pointer"
-              >
+              <Link to={routes[index]} className="w-full cursor-pointer">
                 {item}
               </Link>
               {item === selectedTab && (
