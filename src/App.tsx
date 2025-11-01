@@ -6,6 +6,7 @@ import { HomeView } from "./views/HomeView";
 import { ThemeProvider } from "./components/theme-provider";
 import { ProjectView } from "@/views/project/[projectID]/ProjectView";
 import { AllProjectsView } from "@/views/project/AllProjectsView";
+import { ResumeView } from "@/views/ResumeView";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<HomeView />} />
             <Route path="/projects/:projectID/*" element={<ProjectView />} />
             <Route path="/projects/" element={<AllProjectsView />} />
+            <Route path="/resume/" element={<ResumeView />} />
           </Routes>
         </div>
       </Router>
