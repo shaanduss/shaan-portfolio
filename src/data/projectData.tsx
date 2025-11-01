@@ -57,7 +57,7 @@ export const projectData: ProjectInterface[] = [
       {
         title: "Key Experience 2 — Managing an Intern",
         description:
-          "The company hired a Front-End Developer Intern to help with \
+          "The company hired a front-end developer intern to help with \
         the workload of the front-end and I was in-charge of his tasks and code reviews.\
         I had to take him through onboarding, delegate tasks and review all his Pull Requests. \
         It was a very unique experience that has pushed me to be much more clear \
@@ -71,6 +71,15 @@ export const projectData: ProjectInterface[] = [
         task I worked on were the Email Notification Service + LogMonitor — it would watch the \
         API response log for any failed requests and would email these as a notification \
         to the staff.",
+      },
+      {
+        title: "React Hooks",
+        description:
+          "I had used React Hooks a lot in previous projects, without \
+        properly realizing in what use cases they needed to be used. I also didn't \
+        know their functions very well - like the reason for useEffect or useCallback. \
+        During this internship, I learnt about using the right Hooks cleverly in the code. \
+        As a full-stack engineer, that was a very important skill to learn.",
       },
     ],
     imageLabels: [null, "Loan Management System", null, null, null, null],
@@ -125,6 +134,16 @@ export const projectData: ProjectInterface[] = [
     projectDateStr: "Jul '25",
     numImages: 1,
     githubLink: "https://github.com/shaanduss/dussy-reusable-components",
+    badges: [
+      "React",
+      "React-Hook-Form",
+      "Reusable Components",
+      "Zod",
+      "ShadCN-UI",
+      "Front-end",
+      "UI Design",
+    ],
+    details: [],
   },
   {
     projectID: "alpha-sherpa",
@@ -140,6 +159,22 @@ export const projectData: ProjectInterface[] = [
       "Tickers Page — After",
       null,
     ],
+    badges: [
+      "Typescript",
+      "Docker",
+      "Celery",
+      "Python",
+      "FastAPI",
+      "Linux",
+      "NextJS",
+      "React",
+      "Sass",
+      "Material UI",
+      "AGGridReact",
+      "MongoDB",
+      "Windows Task Scheduler",
+      "TailwindCSS",
+    ],
   },
   {
     projectID: "alpha-sherpa-test",
@@ -149,6 +184,16 @@ export const projectData: ProjectInterface[] = [
     projectDateStr: "Apr '24",
     numImages: 2,
     githubLink: "https://github.com/shaanduss/alphasherpa",
+    badges: [
+      "React",
+      "ChakraUI",
+      "Typescript",
+      "AGGridReact",
+      "Framer Motion",
+      "Lightweight Charts",
+      "NextJS",
+      "Emotion Styles",
+    ],
   },
   {
     projectID: "discord-bot",
@@ -158,6 +203,30 @@ export const projectData: ProjectInterface[] = [
     projectDateStr: "Jan '23",
     numImages: 7,
     githubLink: "https://github.com/shaanduss/discord-bot",
+    badges: ["discord.py", "Python", "MongoDB", "Selenium"],
+    details: [
+      {
+        title: "Key Aspects",
+        description:
+          "This project was my first backend oriented project. \
+          I learnt how to call an external API, manage the .env secrets and \
+          create features that my friends and I wanted to have. The best \
+          feature I built was definitely the time tracking with MongoDB, \
+          it was challenging to sync up my Mongo cluster with the related \
+          discord tracking - once I decided to track for multiple servers - \
+          but it turned out to be a very useful and fun feature.",
+      },
+      {
+        title: "Web Scraping",
+        description:
+          "The best things I learnt about this project were \
+        that I learnt how to use Selenium to web-scrape Pinterest links \
+        to a .txt file to then send in a Discord.embed message. While the \
+        code is lost (due to poor version control), it was a core part to \
+        my journey as a developer as I tried web-scraping for the first time \
+        - successfully.",
+      },
+    ],
   },
   {
     projectID: "jlau",
@@ -167,5 +236,17 @@ export const projectData: ProjectInterface[] = [
     projectDateStr: "Aug '22",
     numImages: 5,
     githubLink: "https://github.com/shaanduss/jordan-lau",
+    badges: [
+      "React",
+      "ChakraUI",
+      "UI Design",
+      "Front-end",
+      "Typescript",
+      "Framer Motion",
+      "Lightweight Charts",
+      "NextJS",
+      "Emotion Styles",
+      "Theming",
+    ],
   },
 ];
